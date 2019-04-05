@@ -2,13 +2,6 @@
 #include <stdlib.h>
 #include "biblioteca.h"
 
-float primerNumero(void);
-float segundoNumero(void);
-float suma(float numUno, float numDos);
-float resta(float numUno, float numDos);
-float multiplicacion(float numUno, float numDos);
-float division(float numUno, float numDos);
-float factorial(float numUno, float numDos);
 int main(){
 	int numeroUno;
 	int numeroDos;
@@ -35,12 +28,12 @@ int main(){
                 break;
 			case 3:
 			    system("cls");
-			    printf("\nCalculando operaciones, ingresar opcion 4 para ver resultados");
-			    printf("\nLa suma de:%3f + %3f",numeroUno,numeroDos);
-                printf("\nLa resta de:%3f - %.3f",numeroUno,numeroDos);
-                printf("\nLa multiplicacion de:%3f * %.3f",numeroUno,numeroDos);
-                printf("\nLa divicion de:%3f / %.3f",numeroUno,numeroDos);
-                printf("\nEl factorial de:%3f y %.3f",numeroUno,numeroDos);
+			    printf("\nCalculando operaciones, (opcion 4 para ver los resultados)");
+			    printf("\nLa suma de:A + B");
+                printf("\nLa resta de:A - B");
+                printf("\nLa multiplicacion de:A * B");
+                printf("\nLa divicion de:A / B");
+                printf("\nEl factorial de:A y B\n");
                 system("pause");
                 break;
             case 4:
