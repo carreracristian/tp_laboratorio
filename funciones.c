@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "biblio.h"
+#include "biblioteca.h"
 
 float primerNumero(void){
     float numero1;
