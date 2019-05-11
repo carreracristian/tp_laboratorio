@@ -1,59 +1,79 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "biblioteca.h"
+#include <string.h>
+#define T 100
+#include "trabajopractico.h"
 
-int main(){
-	int numeroUno;
-	int numeroDos;
-	int opc;
-	int continuar='s';
+int main()
+{
 
-	do{
-		printf("\n1. Ingresar primer operador (A=x).\n2. Ingresar segundo operador (B=y).\n3. Calcular todas las operaciones.\n4. Informar resultados.\n5. Salir.\nOpciones: ");
-		scanf("%d",&opc);
-		fflush(stdin);
+    int opcion;
+    int empleado;
+    int opc;
 
-		switch(opc){
-			case 1:
-                system("cls");
-                numeroUno=primerNumero();
-                system("pause");
-                fflush(stdin);
+    empleado=0;
+
+    eEmployee unEmpleado;
+    eEmployee listadoEmpleados[T];
+    construirArray(listadoEmpleados, T);
+
+    do
+    {
+        printf("1.ALTA\n2.BAJA\n3.MODIFICAR\n4.Informar\n5.Salir\nElija opcion: ");
+        scanf("%d", &opcion);
+
+        switch(opcion)
+        {
+            case 1:
+               ingresarEmpleado(listadoEmpleados, T);
+               empleado=1;
+            break;
+            case 2:
+                if(empleado == 1)
+                {
+                    borrarEmpleado(listadoEmpleados,T);
+                }
+                else
+                {
+                    printf("\nDEBE DAR DE ALTA A AL MENOS UN EMPLEADO EN EL SISTEMA.\n\n");
+                }
                 break;
-			case 2:
-			    system("cls");
-                numeroDos=segundoNumero();
-                system("pause");
-                fflush(stdin);
+            case 3:
+                if(empleado == 1)
+                {
+                    editarEmpleado(listadoEmpleados, T);
+                }
+                else
+                {
+                    printf("\nDEBE DAR DE ALTA A AL MENOS UN EMPLEADO EN EL SISTEMA.\n\n");
+                }
                 break;
-			case 3:
-			    system("cls");
-			    printf("\nCalculando operaciones, (opcion 4 para ver los resultados)");
-			    printf("\nLa suma de:A + B");
-                printf("\nLa resta de:A - B");
-                printf("\nLa multiplicacion de:A * B");
-                printf("\nLa divicion de:A / B");
-                printf("\nEl factorial de:A y B\n");
-                system("pause");
-                break;
+
             case 4:
-                printf("\nLos resultados son:\n");
+                if(empleado == 1)
+                {
+                    printf("1.Mostrar empleados ordenados por apellido y sector\n2.Mostrar informacion de los sueldos\n5.Salir\nElija opcion: ");
+                    scanf("%d", &opc);
+                    switch(opc)
+                    {
+                    case 1:
+                        ordenarEmpleados(listadoEmpleados,T);
+                        mostrarArray(listadoEmpleados,T);
+                        break;
 
-                suma(numeroUno,numeroDos);
-                resta(numeroUno,numeroDos);
-                multiplicacion(numeroUno,numeroDos);
-                division(numeroUno,numeroDos);
-                factorial(numeroUno,numeroDos);
+                    case 2:
+                        mostrarSalario(listadoEmpleados,T);
+                        break;
+                    }
+                }
+                else
+                {
+                    printf("\nPrimero debe ingresar un empleado.\n\n");
+                }
+
                 break;
-			case 5:
-                printf("\nPresione enter para cerrar la consola... \n");
-                continuar='n';
-                break;
-			default:printf("Opcion incorrecta");
-		}
+        }
+    }while(opcion!=5);
 
-	}while(continuar=='s');
-
-	return 0;
+    return 0;
 }
-

@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1557541080 source:c:\users\usuario\desktop\practica programacion\trabajo practico 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"trabajopractico.h"
+
+1557537939 c:\users\usuario\desktop\practica programacion\trabajo practico 2\trabajopractico.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1557540776 source:c:\users\usuario\desktop\practica programacion\trabajo practico 2\trabajopractico.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"trabajopractico.h"
+
+1557538844 source:c:\users\usuario\desktop\practica programacion\trabajo practico 2\validar.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validar.h"
+
+1557535849 c:\users\usuario\desktop\practica programacion\trabajo practico 2\validar.h
+
