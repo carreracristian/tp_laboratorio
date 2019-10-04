@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1570224247 source:c:\users\usuario\desktop\labo2\labo2\trabajo practico 2\arraysemployee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArraysEmployee.h"
+
+1569940156 c:\users\usuario\desktop\labo2\labo2\trabajo practico 2\arraysemployee.h
+	"InputAndValidate.h"
+
+1569940156 c:\users\usuario\desktop\labo2\labo2\trabajo practico 2\inputandvalidate.h
+
+1569940156 source:c:\users\usuario\desktop\labo2\labo2\trabajo practico 2\inputandvalidate.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"InputAndValidate.h"
+
+1570224280 source:c:\users\usuario\desktop\labo2\labo2\trabajo practico 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArraysEmployee.h"
+
